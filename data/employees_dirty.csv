@@ -1,0 +1,45 @@
+emp_id,name,dept,salary,manager_id,hire_date,email
+1001,Uma Duarte,Engineering,158819,,2016-07-17,uma.duarte@corp.example
+1002,Hugo Haddad,Data,156572,,2015-07-29,hugo.haddad@corp.example
+1003,Viktor Reyes,Sales,130848,,2017-05-14,viktor.reyes@corp.example
+1004,Ben Alvarez,Marketing,125070,,2016-03-23,ben.alvarez@corp.example
+1005,Hugo Quintero,Finance,154726,,2015-02-24,hugo.quintero@corp.example
+1006,Rosa Gupta,Support,121856,,2017-05-09,rosa.gupta@corp.example
+1007,Hugo Okafor,Sales,,1003,2024-07-05,hugo.okafor@corp.example
+1008,Zara Fontaine,Marketing,104500,1004,2019-02-12,zara.fontaine@corp.example
+1009,Elif Gupta,Support,86000,1006,2017-02-22,elif.gupta@corp.example
+1010,Chen Moreau,Engineering,141000,1001,2022-10-08,chen.moreau@corp.example
+1011,Iris Brennan,Marketing,130500,1004,2017-05-26,iris.brennan@corp.example
+1012,Mateo Cho,Sales,113500,1003,2022-06-22,mateo.cho@corp.example
+1013,Grace Whitfield,Engineering,126000,1001,2024-09-01,grace.whitfield@corp.example
+1014,Jonas Cho,Support,55000,1006,2020-04-05,jonas.cho@corp.example
+1015,Iris Okafor,Sales,114000,1003,2017-10-28,iris.okafor@corp.example
+1016,Lena Lindqvist,Engineering,131000,1001,2023-11-14,lena.lindqvist@corp.example
+1017,Viktor Ustinov,Engineering,118500,1001,2021-12-27,viktor.ustinov@corp.example
+1018,Xochitl Haddad,Engineering,145500,1001,2019-01-10,xochitl.haddad@corp.example
+1019,Uma Whitfield,Sales,108500,1003,2024-08-13,uma.whitfield@corp.example
+1020,Yusuf Brennan,Engineering,100000,1001,2025-01-10,yusuf.brennan@corp.example
+1021,Kavi Moreau,Engineering,123500,1001,2022-05-12,kavi.moreau@corp.example
+1022,Wen Kowalski,Engineering,161500,1001,2020-06-08,wen.kowalski@corp.example
+1023,Uma Okafor,Engineering,114500,1001,2018-10-07,uma.okafor@corp.example
+1024,Xochitl Reyes,Sales,142500,1003,2020-10-20,xochitl.reyes@corp.example
+1025,Sam Moreau,Data,108000,1002,2021-09-18,sam.moreau@corp.example
+1026,Priya Cho,Finance,87500,1005,2017-09-18,priya.cho@corp.example
+1027,Uma Fontaine,Finance,128500,1005,2022-09-08,uma.fontaine@corp.example
+1028,Mateo Tanaka,Support,111500,1006,2018-10-26,mateo.tanaka@corp.example
+1029,Rosa Alvarez,Marketing,75000,1004,2023-08-24,rosa.alvarez@corp.example
+1030,Rosa Ivanov,Finance,117500,1005,2017-04-01,rosa.ivanov@corp.example
+1031,Jonas Nakamura,Engineering,96500,1001,2024-02-05,jonas.nakamura@corp.example
+1032,Xochitl Ivanov,Support,65500,1006,2021-09-10,xochitl.ivanov@corp.example
+1033,Dara Ustinov,Data,156500,1002,2022-10-30,dara.ustinov@corp.example
+1034,Grace Eriksen,Data,111000,1002,2022-01-18,grace.eriksen@corp.example
+1035,Yusuf Quintero,Support,84500,1006,2021-06-24,yusuf.quintero@corp.example
+1036,Ana Duarte,Support,82500,1006,2018-09-07,ana.duarte@corp.example
+1037,Ben Haddad,Support,52500,1006,2016-12-16,ben.haddad@corp.example
+1038,Xochitl Petrov,Finance,143000,1005,2024-08-02,xochitl.petrov@corp.example
+1039,Elif Eriksen,Marketing,132000,1004,2017-11-07,elif.eriksen@corp.example
+1040,Iris Quintero,Support,97500,1006,2018-05-17,iris.quintero@corp.example
+NOT_AN_ID,Broken Row,Engineering,ninety thousand,1001,2019-13-45,bad@corp.example
+9999,Missing Fields,Data
+1042,Trailing Junk,Sales,91000,1004,2020-04-11,ok@corp.example,EXTRA,MORE
+abc,,,,,,
