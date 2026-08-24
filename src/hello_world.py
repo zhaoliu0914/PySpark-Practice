@@ -12,10 +12,20 @@ spark = glueContext.spark_session
 print("Hello World from AWS Glue!")
 
 # Create a small test dataframe
-data = [("Hello", "World"), ("PySpark", "AWS Glue")]
-df = spark.createDataFrame(data, ["Col1", "Col2"])
+# data = [("Hello", "World"), ("PySpark", "AWS Glue")]
+# df = spark.createDataFrame(data, ["Col1", "Col2"])
+# # Show the data in the logs
+# df.show()
 
-# Show the data in the logs
+# First way to read local file
+# df = spark.read.option("header", "true").csv("file:///home/hadoop/workspace/data/sales.csv")
+
+# Second way to read local file
+df = glueContext.create_dynamic_frame.from_options(
+    connection_type="s3",
+    format="csv",
+    connection_options={"paths": ["file:///home/hadoop/workspace/data/sales.csv"]}
+)
 df.show()
 
 print("Job finished successfully.")
