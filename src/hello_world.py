@@ -25,7 +25,9 @@ df = glueContext.create_dynamic_frame.from_options(
     connection_type="s3",
     format="csv",
     connection_options={"paths": ["file:///home/hadoop/workspace/data/sales.csv"]}
+
 )
+df = dfy.todf()
 df.show()
 
 print("Job finished successfully.")
