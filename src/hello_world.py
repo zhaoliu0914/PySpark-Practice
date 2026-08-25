@@ -21,13 +21,29 @@ print("Hello World from AWS Glue!")
 # df = spark.read.option("header", "true").csv("file:///home/hadoop/workspace/data/sales.csv")
 
 # Second way to read local file
-df = glueContext.create_dynamic_frame.from_options(
+customers_dyf = glueContext.create_dynamic_frame.from_options(
     connection_type="s3",
     format="csv",
-    connection_options={"paths": ["file:///home/hadoop/workspace/data/sales.csv"]}
+    connection_options={"paths": ["file:///home/hadoop/workspace/data/customers.csv"]},
+    format_options={
+        "withHeader": True,
+        # "optimizePerformance": True,
+    },
 
 )
-df = dfy.todf()
-df.show()
+#customers_dyf.show()
+customers = customers_dyf.toDF()
+customers.show()
+
+customers.printSchema()
+
+customers.select("customer_name").show()
+#print(f"customer_name = {customers['customer_name']}")
+
+customers.select(customers["customer_name"], customers["customer_id"] + 1).show()
+
+customers.filter(customers["customer_id"] >= 50).show()
+
+customers.groupBy("city").count().show()
 
 print("Job finished successfully.")
