@@ -1,5 +1,6 @@
 import sys
 from pyspark.context import SparkContext
+from pyspark.sql.functions import broadcast
 from awsglue.context import GlueContext
 from awsglue.utils import getResolvedOptions
 
@@ -46,8 +47,19 @@ customers.filter(customers["customer_id"] >= 50).show()
 
 customers.groupBy("city").count().show()
 
-
-orders = spark.read.option("header", "true").csv("file:///home/hadoop/workspace/data/sales.csv")
+# Read orders.csv with different way
+orders = spark.read.option("header", "true").csv("file:///home/hadoop/workspace/data/orders.csv")
 orders.show()
+
+# Join customers and orders.
+joined_df = orders.join(customers, on="customer_id", how="inner")
+joined_df.show()
+
+joined_filter = joined_df.filter(joined_df.customer_id == 2)
+joined_filter.show()
+
+# Broadcast Join
+broadcast_join = orders.join(broadcast(customers), on="customer_id", how="inner").orderBy("customer_id")
+broadcast_join.show()
 
 print("Job finished successfully.")
