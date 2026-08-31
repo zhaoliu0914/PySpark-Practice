@@ -46,4 +46,8 @@ customers.filter(customers["customer_id"] >= 50).show()
 
 customers.groupBy("city").count().show()
 
+
+orders = spark.read.option("header", "true").csv("file:///home/hadoop/workspace/data/sales.csv")
+orders.show()
+
 print("Job finished successfully.")
